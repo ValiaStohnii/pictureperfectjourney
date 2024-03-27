@@ -1,0 +1,115 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 20px 64px;
+  box-shadow: var(--shadow-primary);
+  background-color: var(--color-white);
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    @include media(mobile-l) {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      flex-direction: column;
+      justify-content: flex-start;
+      overflow-y: auto;
+      padding-top: calc(var(--header-height) * 2);
+      width: 100%;
+      height: calc(var(--vh));
+      background-color: var(--color-white);
+      transform: translateX(150%);
+      transition-property: transform;
+      transition-duration: 0.4s;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 140px 0 auto;
+
+    @include media(tablet-wide) {
+      margin: 0 auto;
+    }
+
+    @include media(mobile-l) {
+      z-index: -1;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 25px;
+
+      @include media(tablet) {
+        margin-right: 12px;
+      }
+
+      @include media(mobile-l) {
+        margin-right: 0;
+      }
+    }
+
+    @include media(mobile-l) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    font-weight: var(--fw-400);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-black);
+
+    &.true {
+      color: var(--color-orange-200);
+    }
+  }
+
+  .btn {
+    padding: 10px 15px;
+
+    &--simple {
+      margin-right: 8px;
+      padding: 10px 16px;
+      min-width: unset;
+
+      @include media(tablet) {
+        margin-right: 8px;
+      }
+    }
+
+    @include media(tablet) {
+      padding: 8px 10px;
+      font-size: 16px;
+    }
+
+    @include media(mobile-l) {
+      margin: 0 auto;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &.formsapp-popup-button {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    padding: 20px;
+  }
+}
