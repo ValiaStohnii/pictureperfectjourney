@@ -2,54 +2,51 @@
 @use "../utils/functions/"as*;
 @use "../utils/mixins"as*;
 
-.btn,
-.formsapp-popup-button {
+.btn {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: 1px solid transparent;
-  border-radius: var(--radius-main);
-  padding: 19px 32px;
+  padding: 16px 32px;
   width: 100%;
   min-width: 100px;
   max-width: fit-content;
-  font-weight: var(--fw-500);
-  font-size: 18px;
+  font-weight: var(--fw-600);
+  font-size: 24px;
   line-height: 1;
+  text-transform: uppercase;
   color: var(--color-white);
-  background-color: var(--color-orange-200);
+  background-color: var(--color-black);
   transition-property: background-color, color, border-color;
   transition-duration: 0.2s;
 
   &:hover,
   &:not(.slick-arrow):focus {
     color: var(--color-white);
-    background-color: var(--color-orange-200);
+    background-color: var(--color-green-200);
   }
 
   &.formsapp-popup-button {
     margin: 0;
     border: 1px solid transparent;
+    border-radius: 0;
+    font-family: var(--font-family-primary);
     font-size: 18px;
+    color: var(--color-black);
   }
 
   &--request {
-    &:hover,
-    &:focus {
-      background-color: var(--color-orange-300);
-    }
+    color: var(--color-black) !important;
+    background-color: var(--color-white) !important;
   }
 
   &--simple {
-    border-color: var(--color-orange-200);
-    color: var(--color-orange-300);
-    background-color: var(--color-white);
+    border-color: var(--color-gray-50);
 
     &:hover,
     &:focus {
-      color: var(--color-white);
-      background-color: var(--color-orange-200);
+      border-color: transparent;
     }
   }
 }

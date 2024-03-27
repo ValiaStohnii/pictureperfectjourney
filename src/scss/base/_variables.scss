@@ -1,16 +1,18 @@
 /* stylelint-disable alpha-value-notation */
 /* stylelint-disable color-function-notation */
-@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
-  --content-width: 1216px;
+  --content-width: 1200px;
   --container-offset: 16px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // font-family
-  --font-family-primary: "Inter", sans-serif;
+  --font-family-primary: "Cormorant", sans-serif;
+  --font-family-secondary: "Josefin Slab", serif;
 
   // font-weight
+  --fw-300: 300;
   --fw-400: 400;
   --fw-500: 500;
   --fw-600: 600;
@@ -18,7 +20,14 @@
 
   // color
   --color-white: #fff;
-  --color-black: #161620;
+  --color-black: #0d0f11;
+  --color-green-100: #ccff00;
+  --color-green-200: #3D412A;
+  --color-gray-50: rgba(255, 255, 255, 0.24);
+  --color-gray-100: rgba(255, 255, 255, 0.64);
+  --color-gray-150: #252C33;
+  --color-gray-200: #1a2025;
+
   --color-dark: #292e3d;
   --color-orange-50: #fff9f6;
   --color-orange-100: rgba(233, 76, 4, 0.12);
