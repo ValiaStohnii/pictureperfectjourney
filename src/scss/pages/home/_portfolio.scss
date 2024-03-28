@@ -1,0 +1,68 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.portfolio {
+  $root: &;
+
+  &--home {
+    padding: 87px 0 84px;
+
+    h2 {
+      margin-bottom: 31px;
+    }
+
+    p {
+      width: 100%;
+      max-width: 561px;
+      text-transform: capitalize;
+    }
+
+    #{$root}__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 64px;
+
+      .btn {
+        letter-spacing: 0.4px;
+        padding: 15px 32px;
+      }
+    }
+
+    #{$root}__content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #{$root}__images {
+      display: flex;
+      justify-content: space-between;
+    }
+ 
+    @include media(tablet) {
+      padding: rem(60) 0;
+
+      #{$root}__content {
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        height: 100%;
+
+        .btn {
+          margin-top: auto;
+        }
+      }
+    }
+
+    @include media(mobile-l) {
+      img {
+        width: 100%;
+        aspect-ratio: 16/7;
+      }
+
+      #{$root}__content {
+        flex-direction: column;
+      }
+    }
+  }
+}
