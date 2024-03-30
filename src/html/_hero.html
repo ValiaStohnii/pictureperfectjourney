@@ -1,8 +1,7 @@
-<section class="hero">
-  <div class="hero__inner" style="background-image: url('./images/{{image}}/hero.jpeg');">
-
-    <div class="hero__content">
-      <div class="container">
+<section class="hero hero--{{title}}">
+  <div class="hero__inner" style="background-image: url('./images/{{image}}/hero-bg.png');">
+    <div class="hero__container">
+      <div class="hero__content">
         <h1>
           {{title}}
         </h1>
@@ -10,12 +9,9 @@
         <p class="{{addClass}}">
           {{text}}
         </p>
-
-        <button class="btn btn--reverse request-btn" type="button" formsappId="66028b19e55f91b1478a0bca">
-          {{button}}
-        </button>
       </div>
-    </div>
 
+      <img src="./images/{{image}}/hero.jpeg" alt=" {{title}}" width="388" height="388" loading="lazy">
+    </div>
   </div>
 </section>

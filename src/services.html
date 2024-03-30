@@ -7,26 +7,30 @@
     <include src="./html/_header.html" locals='{"page": "services"}'></include>
 
     <main class="main">
-      <include src="./html/_hero.html">
-        {
-          "title": "
-            Versatile Modular Solutions: Tailored, Sustainable, Innovative
-          ",
-          "text": "",
-          "addClass": "hidden",
-          "image": "services",
-          "button": "Request a Quote"
-        }
-      </include>
       
       <div class="container">
-        <include src="./html/services/_services.html"></include>
+        <include src="./html/_hero.html">
+          {
+            "title": "services",
+            "text": "
+            Whether it’s the joy of a wedding day, the professionalism of corporate events, or the fun of parties, we're here to capture every moment with care and creativity.
+            ",
+            "addClass": "",
+            "image": "services"
+          }
+        </include>
+
+        <include src="./html/services/_service.html"></include>
       </div>
 
-      <include src="./html/home/_values.html"></include>
+      <include src="./html/services/_pricing.html"></include>
 
-      <include src="./html/home/_request.html"></include>
+      <div class="container">
+        <include src="./html/services/_booking.html"></include>
 
+        <include src="./html/home/_request.html"></include>
+      </div>
+      
     </main>
 
     <include src="./html/_footer.html"></include>

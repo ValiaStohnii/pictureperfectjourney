@@ -7,8 +7,21 @@
     <include src="./html/_header.html" locals='{"page": "faq"}'></include>
 
     <main class="main">
-      <div class="container container--faq">
+      <div class="container">
+        <include src="./html/_hero.html">
+          {
+            "title": "faq",
+            "text": "
+              At PicturePerfectJourney, we understand that planning your event photography can bring up a lot of questions. We've compiled a list of the most frequently asked questions to help make your experience as smooth and straightforward as possible.
+            ",
+            "addClass": "",
+            "image": "faq"
+          }
+        </include>
+
         <include src="./html/_faq.html"></include>
+
+        <include src="./html/home/_request.html"></include>
       </div>
     </main>
 

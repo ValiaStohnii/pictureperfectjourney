@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Blog"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+    <include src="./html/_header.html" locals='{"page": "blog"}'></include>
+
+    <main class="main">
+      
+      <div class="container">
+        <include src="./html/blog/_hero.html">
+          {
+            "title": "
+              The Power of Black and White Photography in Capturing Emotion
+            ",
+            "span": "March 9, 2024",
+            "text": "
+              Black and white photography possesses an undeniable power and charm, especially when it comes to capturing the raw emotions of any event. Stripping away the distraction of color focuses the viewer's attention on the subject's expression, lighting, texture, and the overall mood of the scene. This article delves into why black and white imagery remains a poignant choice for event photographers, aiming to convey stories with depth and feeling.
+            ",
+            "image": "power-black"
+          }
+        </include>
+
+        <include src="./html/home/_request.html"></include>
+      </div>
+      
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

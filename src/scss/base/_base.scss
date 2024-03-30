@@ -34,6 +34,10 @@ body {
   padding: 0 var(--container-offset);
   width: 100%;
   max-width: var(--container-width);
+
+  &--contact-us {
+    padding: 86px var(--container-offset) 0;
+  }
 }
 
 .site-container {
