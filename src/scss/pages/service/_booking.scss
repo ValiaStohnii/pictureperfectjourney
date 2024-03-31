@@ -60,6 +60,20 @@
       margin-right: 20px;
     }
 
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      padding-bottom: 16px;
+      min-height: unset;
+      max-width: unset;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
     h2 {
       font-size: clamp(20px, 2rem + 1vi, 40px);
     }
@@ -67,6 +81,11 @@
 
   @include media(mobile-l) {
     flex-direction: column;
+
+    &__header {
+      flex-direction: column;
+      margin-bottom: 32px;
+    }
 
     &__content {
       margin-right: 0;
@@ -78,13 +97,13 @@
       width: 100%;
     }
 
+    h2 {
+      margin-bottom: 16px;
+    }
+
     p,
     .container {
       max-width: unset;
-    }
-
-    p {
-      margin-bottom: 20px;
     }
 
     img {

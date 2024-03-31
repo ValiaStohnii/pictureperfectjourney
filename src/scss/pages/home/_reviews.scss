@@ -51,6 +51,10 @@
   @include media(tablet) {
     padding: 30px 0;
 
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
     &__image {
       margin-bottom: 12px;
       max-width: 500px;

@@ -44,6 +44,11 @@
   .btn {
     padding: 15px 32px;
     letter-spacing: 0.4px;
+
+    @include media(mobile-l) {
+      padding: 10px 15px;
+      font-size: 18px;
+    }
   }
 
   &--home {
@@ -58,6 +63,14 @@
       background-size: cover;
       background-repeat: no-repeat;
       margin: 57px 0 27px;
+
+      @include media(tablet-wide) {
+        margin-top: 0;
+      }
+
+      @include media(mobile-l) {
+        min-height: 300px;
+      }
     }
 
     #{$root}__images {
@@ -66,6 +79,17 @@
       img {
         &:not(:last-child) {
           margin-right: 16px;
+
+          @include media(tablet-wide) {
+            margin-right: 0;
+            margin-bottom: 16px;
+          }
+        }
+
+        &:last-child {
+          @include media(mobile-l) {
+            display: none;
+          }
         }
       }
     }
@@ -77,6 +101,10 @@
       justify-content: space-between;
       flex-direction: row;
       padding: 0;
+
+      @include media(tablet-wide) {
+        flex-direction: column;
+      }
     }
 
     h1  {
@@ -179,8 +207,17 @@
       min-height: 526px;
     }
 
+    &__container {
+      padding: 40px 0;
+      flex-direction: column;
+    }
+
     &__content {
-      padding: 40px 30px;
+      margin-bottom: 32px;
+    }
+
+    img {
+      aspect-ratio: 16/7;
     }
   }
 
@@ -199,7 +236,6 @@
     }
 
     &__content {
-      padding: 20px 30px;
       max-width: 94%;
     }
   }

@@ -15,8 +15,8 @@
     transform: translateY(-100%);
   }
 
-  @include media(tablet) {
-    .logo {
+  @include media(tablet-wide) {
+    .logo__img {
       max-width: 180px;
     }
   }

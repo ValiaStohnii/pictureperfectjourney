@@ -50,8 +50,12 @@
     &:not(:last-of-type) {
       margin-right: 24px;
 
-      @include media(tablet) {
+      @include media(tablet-wide) {
         margin-right: 12px;
+      }
+
+      @include media(tablet) {
+        margin-right: 8px;
       }
 
       @include media(mobile-l) {
@@ -74,6 +78,11 @@
     &.true {
       color: var(--color-green-100);
     }
+
+    @include media(tablet) {
+      font-size: 12px;
+      letter-spacing: 0;
+    }
   }
 
   .btn {
@@ -87,9 +96,9 @@
       min-width: unset;
     }
 
-    @include media(tablet) {
+    @include media(tablet-wide) {
       padding: 8px 10px;
-      font-size: 16px;
+      font-size: 16px !important;
     }
 
     @include media(mobile-l) {
@@ -107,9 +116,17 @@
 
   .logo__img {
     max-width: 291px;
-  }
 
-  @include media(tablet) {
-    padding: 20px;
+    @include media(tablet-wide) {
+      max-width: 200px;
+    }
+
+    @include media(tablet) {
+      max-width: 180px;
+    }
+
+    @include media(mobile-l) {
+      max-width: 200px;
+    }
   }
 }

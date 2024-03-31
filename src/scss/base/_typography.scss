@@ -27,6 +27,10 @@ h1 {
 h2 {
   font-size: clamp(20px, 4rem + 1vi, 70px);
   text-transform: uppercase;
+
+  @include media(tablet) {
+    font-size: clamp(20px, 2rem + 1vi, 70px);
+  }
 }
 
 h3 {

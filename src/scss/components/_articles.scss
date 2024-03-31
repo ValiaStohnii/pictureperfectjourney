@@ -71,7 +71,7 @@
     h2 {
       margin-bottom: 24px;
     }
-  
+
     &__grid {
       grid-template-columns: 1fr;
     }
@@ -80,6 +80,10 @@
       &:last-child {
         grid-column: auto;
       }
+    }
+
+    img {
+      aspect-ratio: 16/7;
     }
   }
 

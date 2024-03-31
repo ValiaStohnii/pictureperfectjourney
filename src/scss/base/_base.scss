@@ -37,11 +37,19 @@ body {
 
   &--contact-us {
     padding: 86px var(--container-offset) 0;
+
+    @include media(tablet) {
+      padding: 30px var(--container-offset) 0;
+    }
   }
 
   &--power-black {
     .request {
       margin: 210px 0 90px;
+
+      @include media(tablet) {
+        margin: 30px 15px;
+      }
     }
   }
 
@@ -53,6 +61,10 @@ body {
   &--exploring-drone {
     .request {
       margin: 172px 0 90px;
+
+      @include media(tablet) {
+        margin: 30px 15px;
+      }
     }
   }
 }

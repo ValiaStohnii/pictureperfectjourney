@@ -70,12 +70,11 @@
   }
 
   @include media(tablet) {
-    padding: rem(60) 0;
+    padding: 30px 0;
 
     &__content {
       display: flex;
       flex-direction: column;
-      padding: 12px;
       height: 100%;
 
       .btn {
@@ -85,6 +84,12 @@
   }
 
   @include media(mobile-l) {
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
     &__grid {
       grid-template-columns: 1fr;
       margin-bottom: 20px;
@@ -94,6 +99,10 @@
       &:last-child {
         grid-column: auto;
       }
+    }
+
+    h2 {
+      margin-bottom: 16px;
     }
 
     img {

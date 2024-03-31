@@ -78,7 +78,7 @@
   }
 
   @include media(tablet) {
-    padding: rem(60) 0;
+    padding: 30px 15px;
 
     &__content {
       flex-direction: column;
@@ -92,6 +92,10 @@
       margin-bottom: 20px;
       font-size: 16px;
     }
+
+    h2 {
+      font-size: clamp(20px, 3rem + 1vi, 56px);
+    }
   }
 
   @include media(mobile-l) {
@@ -100,21 +104,26 @@
       width: 100%;
       max-width: unset;
     }
+
+    p {
+      max-width: unset;
+    }
   }
 
   @include media(mobile-m) {
-    border-radius: calc(var(--radius-main) * 2) calc(var(--radius-main) * 2) 0 0;
-
     .request__btn {
       display: none;
     }
 
-    h2,
     h3,
     a,
     label {
       margin-left: 0;
       text-align: left;
+    }
+
+    h2 {
+      font-size: clamp(20px, 2rem + 1vi, 56px);
     }
 
     textarea {

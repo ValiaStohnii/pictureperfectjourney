@@ -90,11 +90,17 @@
     padding: 0;
 
     &__inner {
+      padding: 0;
       min-height: 526px;
     }
 
     &__content {
-      padding: 40px 30px;
+      margin-bottom: 32px;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 16px;
     }
   }
 
@@ -103,25 +109,30 @@
       min-height: 500px;
     }
 
-    p {
-      margin-bottom: 20px;
-    }
-
-    &__content {
-      padding: 20px 30px;
-      max-width: 94%;
-    }
-
     &__grid {
       grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
+      gap: 16px;
     }
 
     &__item {
-      padding-top: 100px;
-
       &:last-child {
         grid-column: auto;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+
+    &--corporate {
+      .weddings__item {
+        &:nth-child(3) {
+          grid-column: 1 / span 3;
+
+          img {
+            aspect-ratio: 16/7;
+          }
+        }
       }
     }
   }
@@ -129,6 +140,18 @@
   @include media(mobile-s) {
     &__grid {
       grid-template-columns: 1fr;
+    }
+
+    &--corporate {
+      .weddings__item {
+        &:nth-child(3) {
+          grid-column: auto;
+        }
+      }
+    }
+
+    img {
+      aspect-ratio: 16/7;
     }
   }
 }

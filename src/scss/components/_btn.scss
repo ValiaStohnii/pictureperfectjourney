@@ -34,11 +34,23 @@
     font-family: var(--font-family-primary);
     font-size: 18px;
     color: var(--color-black);
+
+    &:hover,
+    &:focus {
+      color: var(--color-white);
+      background-color: var(--color-green-200);
+    }
   }
 
   &--request {
     color: var(--color-black) !important;
     background-color: var(--color-white) !important;
+
+    &:hover,
+    &:focus {
+      color: var(--color-white) !important;
+      background-color: var(--color-green-200) !important;
+    }
   }
 
   &--simple {
@@ -48,5 +60,10 @@
     &:focus {
       border-color: transparent;
     }
+  }
+
+  @include media(mobile-l) {
+    padding: 10px 15px;
+    font-size: 18px;
   }
 }
