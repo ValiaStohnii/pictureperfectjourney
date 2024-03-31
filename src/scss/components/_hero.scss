@@ -119,6 +119,7 @@
   }
 
   &--articles {
+    padding: 86px 0 32px;
     a {
       font-weight: var(--fw-600);
       font-size: 24px;
@@ -159,7 +160,9 @@
     }
 
     p {
-      max-width: 795px;
+      width: 100%;
+      max-width: 800px;
+      line-height: 1.44;
     }
   }
 
